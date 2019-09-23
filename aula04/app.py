@@ -1,6 +1,5 @@
 #!flask/bin/python
 from flask import Flask
-
 app = Flask(__name__)
 
 
@@ -26,10 +25,6 @@ def user(name=""):
 @app.route("/google")
 def google():
     return redirect("http://google.com")
-
-
-if __name__ == '__main__':
-    app.run()
 
 if __name__ == '__main__':
     app.run(debug=True)

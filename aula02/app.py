@@ -41,6 +41,9 @@ def escrevanatelaoperacoesf(num1=7.8,num2=8.3):
 
 @app.route('/operacoes/')
 @app.route('/operacoes/<int:num1>/<int:num2>')
+#Você pode adicionar seções variáveis a um URL marcando seções com <nome da variável>.
+# Sua função então recebe o <nome da variável> como um argumento de palavra-chave.
+# Opcionalmente, você pode usar um conversor para especificar o tipo de argumento como <converter: variable_name>.
 def escrevanatelaoperacoes(num1=10,num2=10):
     soma = num1 + num2
     subtracao = num1 - num2

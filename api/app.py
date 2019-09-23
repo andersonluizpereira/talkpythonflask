@@ -1,7 +1,5 @@
 import requests
-from datetime import datetime
-from flask import Flask, abort, jsonify, request
-import hashlib
+from flask import Flask, jsonify
 
 config = {
          "limit":'10',
@@ -20,6 +18,7 @@ headers = {
     }
 
 app = Flask(__name__)
+#Nessa linha é instanciado um objeto da classe Flask, é ele que vamos utilizar para configurar a nossa aplicação e para executa-la com o servidor de testes do próprio Flask.
 
 @app.route("/", methods=['GET'])
 def hello():
