@@ -1,6 +1,6 @@
 
 
-#Instalar essas duas dependencias
+# Instalar essas duas dependencias
 #pip install flask
 #pip install Jinja2
 
@@ -16,11 +16,11 @@
 
 #@app.route("/") → é um decorator responsável por interpretar a rota que acessamos, então, assim que é acessada a url / como é configurado na linha acima, a função que está abaixo é responsável por enviar uma rota ao navegador.
 
-#def index():
-#    return "Hello Flask!" → é a função que tem como objetivo retornar somente um texto plano como Hello Flask.
+# def index():
+#return "Hello Flask!" → é a função que tem como objetivo retornar somente um texto plano como Hello Flask.
 
-#if __name__ == '__main__':
-#    app.run(debug=True) → essas instruções definem que quando o "run.py" for executado via linha de comando. O Flask deverá iniciar o seu servidor interno para executar a aplicação, como no construtor foi passado o valor "True" para a chave "debug", o servidor será iniciado no modo debug; assim, quando forem feitas modificações no código e elas forem salvas o servidor irá reiniciar automaticamente para que você possa testar o novo código.
+#i f __name__ == '__main__':
+# app.run(debug=True) → essas instruções definem que quando o "run.py" for executado via linha de comando. O Flask deverá iniciar o seu servidor interno para executar a aplicação, como no construtor foi passado o valor "True" para a chave "debug", o servidor será iniciado no modo debug; assim, quando forem feitas modificações no código e elas forem salvas o servidor irá reiniciar automaticamente para que você possa testar o novo código.
 
 #Esse é o código mais básico que se pode ter em Flask.
 
@@ -29,4 +29,4 @@
 #5000 → é a porta padrão do Flask, você pode mudá-la passando o parâmetro "port no contrutor", deixando ele da seguinte forma:
 
 #if __name__ == '__main__':
-#    app.run(debug=True,port=6543)
+#app.run(debug=True,port=6543)

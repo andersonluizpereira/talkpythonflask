@@ -4,7 +4,8 @@ from flask import Flask,jsonify,render_template
 #render_template: passando o nome do modelo e a variáveis ele vai renderizar o template
 
 
-#Nessa linha é instanciado um objeto da classe Flask, é ele que vamos utilizar para configurar a nossa aplicação
+#Nessa linha é instanciado um objeto da classe Flask, é ele que vamos utilizar para configurar
+# a nossa aplicação
 # e para executa-la com o servidor de testes do próprio Flask.
 #Caso queira configurar uma pasta criar aplicações web, utilize a nomenclatura template_folder
 app = Flask(__name__, template_folder='template')
@@ -24,7 +25,8 @@ def index():
    # A função jsonify() no flask retorna
    #um objeto flask.Response() que já possui o
    #cabeçalho de tipo de conteúdo apropriado 'application / json'
-   #para uso com respostas json.Considerando que, o método json.dumps() retornará apenas uma cadeia codificada, o que exigiria adicionar manualmente o cabeçalho do tipo MIME.
+   #para uso com respostas json.Considerando que, o método json.dumps() retornará
+   # apenas uma cadeia codificada, o que exigiria adicionar manualmente o cabeçalho do tipo MIME.
     return jsonify({"message":"Hello World!"})
 
 # app.run(debug=True) → essas instruções definem que quando o "app.py" for executado via linha de comando.

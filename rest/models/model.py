@@ -1,8 +1,16 @@
+#SQLAlchemy é uma poderosa ferramenta ORM que possibilita aos desenvolvedores
+# trabalhar com dados armazenados no banco de dados de maneira flexível e simplificada.
 from flask_sqlalchemy import SQLAlchemy
+#Biblioteca que permite autenticacao Autorizathion: Basic
 from flask_httpauth import HTTPBasicAuth
+
+#O PassLib fornece vários algoritmos de hash para você escolher.
+# O objeto custom_app_context é uma opção fácil de usar, com base no algoritmo de hash sha256_crypt.
 from passlib.apps import custom_app_context as pwd_context
+
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
+#https://stackoverflow.com/questions/15083967/when-should-flask-g-be-used
 from flask import g
 
 db = SQLAlchemy()

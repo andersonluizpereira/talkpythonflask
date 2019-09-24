@@ -2,18 +2,24 @@ from os import abort
 
 from flask import request, Blueprint, jsonify, g
 
+#flask.g : é um objeto no Flask que possui a responsabilidade de armazenar e compartilhar
+# dados através do tempo de execução de uma requisição
+
 from rest.models.model import db, auth, Usuario
 
 app = Blueprint("usuario", __name__)
 
 @app.route('/api/adicionar', methods=['POST'])
 def new_user():
+    #*args: o * é utilizado para
+    #permitir que um parâmetro aceite um número não definido de
+    #argumentos para sua função(parecido com a keyword params no C # )
     username = request.json.get('username')
     password = request.json.get('password')
     if username is None or password is None:
-        return jsonify({'missing arguments': ''}), 400   # missing arguments
+        return jsonify({'ta faltando algum campo !': ''}), 400   # missing arguments
     if Usuario.query.filter_by(username=username).first() is not None:
-        return jsonify({'existing user': username}), 400   # existing user
+        return jsonify({'usuario ja existe!': username}), 400   # existing user
     user = Usuario(username=username)
     user.hash_password(password)
     db.session.add(user)
